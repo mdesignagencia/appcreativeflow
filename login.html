@@ -1,3 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzI1NjNlYiIvPjxwYXRoIGQ9Ik0xMCAxMSBMMTcgMTYgTDEwIDIxIiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTE2IDExIEwyMyAxNiBMMTYgMjEiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjUpIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PGNpcmNsZSBjeD0iMjYiIGN5PSIxNiIgcj0iNCIgZmlsbD0iIzA1OTY2OSIvPjxwYXRoIGQ9Ik0yNCAxNiBMMjUuNSAxNy41IEwyOCAxNC41IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEuNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+Cg==">
+<link rel="shortcut icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iIzI1NjNlYiIvPjxwYXRoIGQ9Ik0xMCAxMSBMMTcgMTYgTDEwIDIxIiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTE2IDExIEwyMyAxNiBMMTYgMjEiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjUpIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PGNpcmNsZSBjeD0iMjYiIGN5PSIxNiIgcj0iNCIgZmlsbD0iIzA1OTY2OSIvPjxwYXRoIGQ9Ik0yNCAxNiBMMjUuNSAxNy41IEwyOCAxNC41IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEuNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+Cg==">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjE4MCIgaGVpZ2h0PSIxODAiIHJ4PSI0MCIgZmlsbD0iIzI1NjNlYiIvPjxwYXRoIGQ9Ik0xNDAgNDUgQTcyIDcyIDAgMSAwIDE0MCAxMzUiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjE1KSIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTU4IDY3IEw5MCA5MCBMNTggMTEzIiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNODAgNjcgTDExMiA5MCBMODAgMTEzIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC40OCkiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjE0MCIgY3k9IjkwIiByPSIyMCIgZmlsbD0iIzA1OTY2OSIvPjxwYXRoIGQ9Ik0xMzAgOTAgTDEzNyA5OCBMMTUyIDgwIiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPgo=">
+<meta name="theme-color" content="#2563eb">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="CreativeFlow">
+<title>CreativeFlow — Acesso</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+  :root{--bg:#030812;--surface:rgba(8,18,38,0.88);--glass:rgba(255,255,255,0.05);--border:rgba(255,255,255,0.08);--accent:#2563eb;--accent-glow:rgba(37,99,235,0.35);--text:#e8f0fe;--muted:#7090b8;}
+  body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;}
+  body::before{content:'';position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse 70% 50% at 15% 15%,rgba(37,99,235,0.18) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 85% 85%,rgba(124,58,237,0.08) 0%,transparent 60%);pointer-events:none;}
+  body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.01) 39px,rgba(255,255,255,0.01) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.01) 39px,rgba(255,255,255,0.01) 40px);}
+  .card{position:relative;z-index:1;background:var(--surface);backdrop-filter:blur(28px) saturate(2);border:1px solid var(--border);border-radius:24px;padding:44px 40px;width:100%;max-width:420px;box-shadow:0 32px 80px rgba(0,0,0,0.7),0 0 60px rgba(37,99,235,0.06),inset 0 1px 0 rgba(255,255,255,0.06);}
+  .logo-row{display:flex;align-items:center;gap:10px;margin-bottom:28px;}
+  .logo-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#2563eb,#1e40af);display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px rgba(37,99,235,0.4);}
+  .logo-text{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;letter-spacing:-.01em;color:var(--text);}
+  .logo-text span{color:#2563eb;}
+  h1{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;margin-bottom:6px;line-height:1.1;}
+  .subtitle{font-size:13px;color:var(--muted);margin-bottom:32px;}
+  .tabs{display:flex;gap:5px;margin-bottom:28px;background:rgba(255,255,255,0.04);border-radius:12px;padding:4px;border:1px solid rgba(255,255,255,0.06);}
+  .tab{flex:1;padding:9px;border-radius:9px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:var(--muted);background:transparent;transition:all 0.25s;}
+  .tab.active{background:linear-gradient(135deg,var(--accent),#1d4ed8);color:white;box-shadow:0 4px 16px var(--accent-glow);}
+  .form-group{margin-bottom:16px;}
+  label{display:block;font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;}
+  input{width:100%;padding:12px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:12px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;}
+  input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,0.15);}
+  input::placeholder{color:rgba(136,153,187,0.45);}
+  .btn{width:100%;padding:13px;background:linear-gradient(135deg,var(--accent),#1d4ed8);border:none;border-radius:12px;cursor:pointer;color:white;font-family:'Syne',sans-serif;font-size:14px;font-weight:700;transition:all 0.25s;box-shadow:0 4px 20px var(--accent-glow);margin-top:6px;}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px var(--accent-glow);}
+  .btn:active{transform:translateY(0);}
+  .btn:disabled{opacity:0.5;cursor:not-allowed;transform:none;}
+  .error{background:rgba(220,38,38,0.1);border:1px solid rgba(220,38,38,0.25);border-radius:10px;padding:10px 14px;font-size:13px;color:#f87171;margin-bottom:16px;display:none;}
+  .error.show{display:block;}
+  .panel{display:none;}.panel.active{display:block;}
+  .footer{text-align:center;margin-top:24px;font-size:11px;color:var(--muted);}
+  .spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,0.3);border-top-color:white;border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle;margin-right:6px;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .pwd-hint{font-size:11px;color:var(--muted);margin-top:6px;opacity:.7;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo-row">
+    <div class="logo-icon">
+      <svg width="20" height="20" viewBox="0 0 56 56" fill="none">
+        <path d="M22 21 L30 28 L22 35" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M28 21 L36 28 L28 35" stroke="rgba(255,255,255,.5)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="42" cy="28" r="6" fill="#059669"/>
+      </svg>
+    </div>
+    <span class="logo-text">Creative<span>Flow</span></span>
+  </div>
+
+  <h1>Bem-vindo</h1>
+  <p class="subtitle">Acesse o dashboard de aprovação de criativos</p>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('client')">Sou Cliente</button>
+    <button class="tab" onclick="switchTab('admin')">Admin</button>
+  </div>
+
+  <div class="error" id="errorMsg"></div>
+
+  <!-- CLIENT PANEL — email + senha -->
+  <div class="panel active" id="panel-client">
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" id="clientEmail" placeholder="seu@email.com" autocomplete="email">
+    </div>
+    <div class="form-group">
+      <label>Senha</label>
+      <input type="password" id="clientPassword" placeholder="••••••••" autocomplete="current-password">
+    </div>
+    <button class="btn" onclick="loginClient()" id="btnClient">Entrar no Dashboard</button>
+  </div>
+
+  <!-- ADMIN PANEL -->
+  <div class="panel" id="panel-admin">
+    <div class="form-group">
+      <label>Senha Administrativa</label>
+      <input type="password" id="adminSecret" placeholder="••••••••••••" autocomplete="current-password">
+    </div>
+    <button class="btn" onclick="loginAdmin()" id="btnAdmin">Acessar Painel Admin</button>
+  </div>
+
+  <div class="footer">CreativeFlow · Aprovação de Criativos</div>
+</div>
+
 <script>
   function switchTab(tab){
     document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',(tab==='client'&&i===0)||(tab==='admin'&&i===1)));
@@ -5,101 +102,53 @@
     document.getElementById('panel-admin').classList.toggle('active',tab==='admin');
     clearError();
   }
-
-  function showError(msg){
-    const el=document.getElementById('errorMsg');
-    el.textContent=msg;
-    el.classList.add('show');
-  }
-
-  function clearError(){
-    document.getElementById('errorMsg').classList.remove('show');
-  }
+  function showError(msg){const el=document.getElementById('errorMsg');el.textContent=msg;el.classList.add('show');}
+  function clearError(){document.getElementById('errorMsg').classList.remove('show');}
 
   async function loginClient(){
     const email=document.getElementById('clientEmail').value.trim();
     const password=document.getElementById('clientPassword').value;
-
     if(!email) return showError('Preencha seu email.');
     if(!password) return showError('Preencha sua senha.');
-
     const btn=document.getElementById('btnClient');
-
-    btn.disabled=true;
-    btn.innerHTML='<span class="spinner"></span> Verificando...';
-
+    btn.disabled=true; btn.innerHTML='<span class="spinner"></span> Verificando...';
     try{
       const res=await fetch('/api/client/login',{
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
+        method:'POST',headers:{'Content-Type':'application/json'},
         body:JSON.stringify({email,password})
       });
-
       const data=await res.json();
-
-      if(!res.ok){
-        showError(data.error||'Email ou senha incorretos.');
-        return;
-      }
-
+      if(!res.ok){showError(data.error||'Email ou senha incorretos.');return;}
+      // Store credentials for session
       localStorage.setItem('cf_client_email',email);
       localStorage.setItem('cf_client_password',password);
       localStorage.setItem('cf_role','client');
-
       window.location.href='/client';
-
-    }catch{
-      showError('Erro de conexão. Tente novamente.');
-    }
-
-    finally{
-      btn.disabled=false;
-      btn.innerHTML='Entrar no Dashboard';
-    }
+    }catch{showError('Erro de conexão. Tente novamente.');}
+    finally{btn.disabled=false;btn.innerHTML='Entrar no Dashboard';}
   }
 
-  // LOGIN ADMIN COM SENHA FIXA
-  function loginAdmin(){
-
-    const ADMIN_PASSWORD = "Admin1410";
-
+  async function loginAdmin(){
     const secret=document.getElementById('adminSecret').value.trim();
-
-    if(!secret){
-      return showError('Digite a senha administrativa.');
-    }
-
+    if(!secret) return showError('Digite a senha administrativa.');
     const btn=document.getElementById('btnAdmin');
-
-    btn.disabled=true;
-    btn.innerHTML='<span class="spinner"></span> Autenticando...';
-
-    setTimeout(()=>{
-
-      if(secret === ADMIN_PASSWORD){
-
-        localStorage.setItem('cf_admin_token',secret);
-        localStorage.setItem('cf_role','admin');
-
-        window.location.href='/admin';
-
-      }else{
-        showError('Senha incorreta.');
-      }
-
-      btn.disabled=false;
-      btn.innerHTML='Acessar Painel Admin';
-
-    },800);
+    btn.disabled=true; btn.innerHTML='<span class="spinner"></span> Autenticando...';
+    try{
+      const res=await fetch('/api/admin/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({secret})});
+      if(!res.ok){showError('Senha incorreta.');return;}
+      localStorage.setItem('cf_admin_token',secret);
+      localStorage.setItem('cf_role','admin');
+      window.location.href='/admin';
+    }catch{showError('Erro de conexão.');}
+    finally{btn.disabled=false;btn.innerHTML='Acessar Painel Admin';}
   }
 
   document.addEventListener('keydown',e=>{
     if(e.key==='Enter'){
-      if(document.getElementById('panel-client').classList.contains('active')){
-        loginClient();
-      }else{
-        loginAdmin();
-      }
+      if(document.getElementById('panel-client').classList.contains('active')) loginClient();
+      else loginAdmin();
     }
   });
 </script>
+</body>
+</html>
